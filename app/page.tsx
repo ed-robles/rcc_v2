@@ -115,6 +115,28 @@ export default function HomePage() {
     };
   }, [relayout]);
 
+  // Pause auto-scroll while user scrolls/touches (helps iOS Safari jank)
+  useEffect(() => {
+    let scrollTimeout: number | null = null;
+    const markScrolling = () => {
+      document.documentElement.classList.add("is-scrolling");
+      if (scrollTimeout) window.clearTimeout(scrollTimeout);
+      scrollTimeout = window.setTimeout(() => {
+        document.documentElement.classList.remove("is-scrolling");
+        scrollTimeout = null;
+      }, 150);
+    };
+    const onScroll = () => markScrolling();
+    const onTouchMove = () => markScrolling();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("touchmove", onTouchMove, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("touchmove", onTouchMove);
+      if (scrollTimeout) window.clearTimeout(scrollTimeout);
+    };
+  }, []);
+
   return (
     <main style={{ padding: "20px" }}>
       <div className="gallery-container">
@@ -129,6 +151,8 @@ export default function HomePage() {
                     src={src}
                     alt="Gallery image"
                     loading="lazy"
+                    decoding="async"
+                    fetchPriority="low"
                     onClick={() => openAt(idx)}
                     style={{ cursor: "zoom-in" }}
                     onLoad={relayout}
@@ -146,6 +170,8 @@ export default function HomePage() {
                     alt=""
                     aria-hidden="true"
                     loading="lazy"
+                    decoding="async"
+                    fetchPriority="low"
                     onLoad={relayout}
                   />
                 </figure>

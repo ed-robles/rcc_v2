@@ -52,14 +52,31 @@ body {
 /* Auto-rolling scroller: infinite vertical loop */
 .scroller-viewport {
   position: relative;
+  /* Fallback for browsers without svh/dvh */
   height: calc(100vh - 120px);
   overflow: hidden;
+}
+
+/* Use stable viewport height on iOS Safari to avoid reflow when bars collapse */
+@supports (height: 100svh) {
+  .scroller-viewport {
+    height: calc(100svh - 120px);
+  }
 }
 
 .scroller-inner {
   display: grid;
   grid-auto-rows: max-content; /* stack two masonry blocks vertically */
   animation: scrollY var(--scroll-duration, 45s) linear infinite;
+  /* Performance hints for iOS/Safari */
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Pause auto-scroll while the user is actively scrolling the page */
+.is-scrolling .scroller-inner {
+  animation-play-state: paused;
 }
 
 @keyframes scrollY {
