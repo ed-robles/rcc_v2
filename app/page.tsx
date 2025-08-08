@@ -164,9 +164,8 @@ export default function HomePage() {
           they feel.
         </p>
         <p>
-          This portfolio is a collection of our favorite frames. Scroll through,
-          click on any image to see it in full, and explore the way we see the
-          world.
+          This portfolio is a collection of our favorite frames. Click on any
+          image to see it in full, and explore the way we see the world.
         </p>
         <p>
           If our style resonates with you, we’d love to talk about how we can
