@@ -5,8 +5,7 @@ import Image from "next/image";
 
 // All images found in /public. These resolve at runtime as "/<name>" paths.
 const ALL_IMAGES = [
-  "/DSC01195.jpg",
-  "/DSC01029.jpg",
+  "/collage1.png",
   "/DSC01049.jpg",
   "/DSC00625.jpg",
   "/DSC00642.jpg",
