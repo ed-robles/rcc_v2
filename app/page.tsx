@@ -1,6 +1,7 @@
 "use client";
 
-import { useCallback, useRef } from "react";
+import { useCallback, useRef, useState } from "react";
+import Image from "next/image";
 
 // All images found in /public. These resolve at runtime as "/<name>" paths.
 const ALL_IMAGES = [
@@ -25,7 +26,16 @@ const ALL_IMAGES = [
 ];
 
 export default function HomePage() {
+  const [fullScreenImage, setFullScreenImage] = useState<string | null>(null);
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
+
+  const openFullScreen = useCallback((src: string) => {
+    setFullScreenImage(src);
+  }, []);
+
+  const closeFullScreen = useCallback(() => {
+    setFullScreenImage(null);
+  }, []);
 
   const scrollLeft = useCallback(() => {
     if (scrollContainerRef.current) {
@@ -53,7 +63,13 @@ export default function HomePage() {
           {ALL_IMAGES.map((src, idx) => (
             <div className="gallery-item" key={idx}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={src} alt="Gallery image" loading="lazy" />
+              <img
+                src={src}
+                alt="Gallery image"
+                loading="lazy"
+                onClick={() => openFullScreen(src)}
+                style={{ cursor: "pointer" }}
+              />
             </div>
           ))}
         </div>
@@ -65,6 +81,22 @@ export default function HomePage() {
           ›
         </button>
       </div>
+      {fullScreenImage && (
+        <div
+          className="fullscreen-overlay"
+          onClick={closeFullScreen}
+          role="dialog"
+          aria-modal="true"
+        >
+          <Image
+            src={fullScreenImage}
+            alt="Full screen view"
+            className="fullscreen-image"
+            fill
+            sizes="100vw"
+          />
+        </div>
+      )}
       <section className="text-section" aria-label="Content">
         <p>
           We specialize in creating images that are both visually striking and

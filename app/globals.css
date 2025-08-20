@@ -88,7 +88,6 @@ body {
   width: auto;
   height: auto;
   object-fit: contain;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .lightbox-btn {
@@ -189,4 +188,26 @@ body {
 
 .scroll-btn:hover {
   background: rgba(0, 0, 0, 0.6);
+}
+
+/* Fullscreen overlay for images */
+.fullscreen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8); /* Semi-transparent overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Ensure proper centering */
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.fullscreen-image {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  margin: auto; /* Center the image */
 }
