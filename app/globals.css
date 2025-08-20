@@ -21,9 +21,7 @@ body {
 .masonry {
   display: grid;
   grid-template-columns: 1fr; /* default 1 column */
-  gap: 4px; /* uniform small gaps */
-  grid-auto-rows: 4px; /* base row size for span calc */
-  grid-auto-flow: dense; /* pack items tightly to minimize gaps */
+  gap: 8px; /* uniform small gaps */
   max-width: 1100px; /* avoid full-bleed on desktop */
   margin: 0 auto;
 }
@@ -49,58 +47,6 @@ body {
   height: auto;
 }
 
-/* Auto-rolling scroller: infinite vertical loop */
-.scroller-viewport {
-  position: relative;
-  height: calc(100vh - 120px);
-  overflow: hidden;
-}
-
-.scroller-inner {
-  display: grid;
-  grid-auto-rows: max-content; /* stack two masonry blocks vertically */
-  animation: scrollY var(--scroll-duration, 45s) linear infinite;
-}
-
-@keyframes scrollY {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-50%);
-  } /* move up by one block height */
-}
-
-/* Soft fade at edges for a more polished look */
-.scroller-viewport::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 64px;
-  pointer-events: none;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff 70%);
-}
-
-.scroller-viewport::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: 32px;
-  pointer-events: none;
-  background: linear-gradient(to top, rgba(255, 255, 255, 0), #fff 80%);
-}
-
-/* Respect user motion preferences */
-@media (prefers-reduced-motion: reduce) {
-  .scroller-inner {
-    animation: none !important;
-  }
-}
-
 /* Container around the gallery for alignment/padding control */
 .gallery-container {
   max-width: 1200px;
@@ -109,11 +55,12 @@ body {
 
 /* Text content below the gallery */
 .text-section {
-  max-width: 760px;
+  max-width: 700px;
   margin: 32px auto 20px;
   padding: 0 16px;
   color: #333;
   line-height: 1.65;
+  font-size: 1rem; /* Make text a little smaller */
 }
 .text-section p + p {
   margin-top: 12px;
@@ -188,4 +135,58 @@ body {
 .site-footer .footer-sep {
   margin: 0 10px;
   color: #bbb;
+}
+
+/* Horizontal Scrolling Gallery */
+.horizontal-gallery {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 8px;
+  padding: 16px 0;
+}
+
+.horizontal-gallery::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
+}
+
+.gallery-item {
+  flex: 0 0 calc(30% - 8px); /* Increase the width slightly to make images bigger */
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: none; /* Adjust border radius for slightly larger images */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15); /* Enhance shadow for larger images */
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.scroll-btn.left {
+  left: 10px;
+}
+
+.scroll-btn.right {
+  right: 10px;
+}
+
+.scroll-btn:hover {
+  background: rgba(0, 0, 0, 0.6);
 }
