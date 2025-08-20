@@ -15,6 +15,7 @@ body {
   justify-content: center;
   padding: 8px 0;
   background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add light shadow to the bottom */
 }
 
 /* Masonry using CSS Grid for uniform gaps */
@@ -158,7 +159,7 @@ body {
   width: 100%;
   height: auto;
   border-radius: none; /* Adjust border radius for slightly larger images */
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15); /* Enhance shadow for larger images */
+  box-shadow: none; /* Remove shadow */
 }
 
 @media (max-width: 600px) {
