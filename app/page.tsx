@@ -11,7 +11,7 @@ export default function HomePage() {
         </p>
         <p>
           We help brands and individuals make a lasting impact in the digital
-          space — combining compelling visuals with clean, modern online
+          space — combining compelling visuals with modern online
           experiences that stand out and drive results.
         </p>
       </div>
