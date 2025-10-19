@@ -51,9 +51,9 @@ export default function RootLayout({
         <header className="site-header">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/rcc_planet_black.png"
+            src="/rcc_planet.png"
             alt="RCC logo"
-            style={{ width: 150, height: 84 }}
+            style={{ width: 180, height: 101 }}
           />
         </header>
         {children}
