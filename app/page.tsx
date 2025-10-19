@@ -6,8 +6,8 @@ export default function HomePage() {
           <span className="font-bold tracking-tight">
             Robles Creative Company
           </span>{" "}
-          is a Milwaukee-based creative studio specializing in photography,
-          video production, and web development.{" "}
+          is a creative agency based in Milwaukee. Specializing in photography,
+          video production, and web services.{" "}
         </p>
         <p>
           We help brands and individuals make a lasting impact in the digital
