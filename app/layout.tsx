@@ -53,7 +53,7 @@ export default function RootLayout({
           <img
             src="/rcc_planet_black.png"
             alt="RCC logo"
-            style={{ width: 80, height: 80 }}
+            style={{ width: 150, height: 84 }}
           />
         </header>
         {children}
