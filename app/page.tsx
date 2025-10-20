@@ -1,7 +1,7 @@
 export default function HomePage() {
   return (
-    <main className="simple-page">
-      <div className="simple-page__inner">
+    <main className="simple-page font-bold">
+      <div className="simple-page__inner p-shadow">
         <p>
           <span className="font-bold tracking-tight">
             Robles Creative Company
