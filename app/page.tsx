@@ -11,10 +11,8 @@ export default function HomePage() {
         </p>
         <p>
           Our work is built on collaboration, creativity, and technical
-          precision. Whether it’s developing a brand identity from the ground
-          up, or building a modern, responsive website with payment
-          functionality, we approach every project with the goal of helping our
-          clients communicate their vision clearly and creatively.
+          precision. We approach every project with the goal of helping our
+          clients communicate their vision clearly and effectively.
         </p>
       </div>
     </main>
