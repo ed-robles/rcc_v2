@@ -48,13 +48,13 @@ export default function RootLayout({
         </header>
         <nav className="site-nav" aria-label="Primary navigation">
           <a className="site-nav__link" href="/">
-            Home
+            HOME
           </a>
           <a className="site-nav__link" href="/our-work">
-            Our Work
+            OUR WORK
           </a>
           <a className="site-nav__link" href="/contact">
-            Contact
+            CONTACT
           </a>
         </nav>
         {children}
