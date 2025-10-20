@@ -46,6 +46,17 @@ export default function RootLayout({
             style={{ width: 180, height: 101 }}
           />
         </header>
+        <nav className="site-nav" aria-label="Primary navigation">
+          <a className="site-nav__link" href="/">
+            Home
+          </a>
+          <a className="site-nav__link" href="/our-work">
+            Our Work
+          </a>
+          <a className="site-nav__link" href="/contact">
+            Contact
+          </a>
+        </nav>
         {children}
         <footer className="site-footer">
           <div className="footer-content">

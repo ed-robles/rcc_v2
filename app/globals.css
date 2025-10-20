@@ -37,6 +37,29 @@ p {
   background: white;
 }
 
+.site-nav {
+  background: white;
+  border: black 1px solid;
+  display: flex;
+  justify-content: center;
+  gap: 72px;
+  padding: 12px 0;
+  margin-left: 36px;
+  margin-right: 36px;
+  margin-top: 36px;
+}
+
+.site-nav__link {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  transition: font-weight 0.2s ease;
+}
+
+.site-nav__link:hover {
+  font-weight: 700;
+}
+
 .font-bold {
   font-weight: 600;
 }
@@ -176,6 +199,12 @@ p {
     padding-left: 12px;
     font-size: 2rem;
     padding-right: 0px;
+  }
+
+  .site-nav {
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 10px 0;
   }
 
   .footer-content {
