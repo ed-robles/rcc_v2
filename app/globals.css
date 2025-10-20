@@ -122,6 +122,20 @@ p {
   gap: 4px;
 }
 
+.footer-link-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+
+.footer-link-icon svg {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
 .footer-column .footer-link {
   margin-bottom: 4px;
   font-size: 0.95rem;
