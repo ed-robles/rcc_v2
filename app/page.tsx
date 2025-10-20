@@ -3,7 +3,7 @@ export default function HomePage() {
     <main className="simple-page font-bold">
       <div className="simple-page__inner p-shadow">
         <p>
-          <span className="font-bold tracking-tight">
+          <span className="tracking-tight">
             Robles Creative Company
           </span>{" "}
           is a creative agency based in Milwaukee - specializing in photography,

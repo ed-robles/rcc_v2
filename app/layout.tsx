@@ -48,17 +48,17 @@ export default function RootLayout({
         </header>
         <nav className="site-nav" aria-label="Primary navigation">
           <Link className="site-nav__link" href="/" data-label="HOME">
-            Home
+            HOME
           </Link>
-          <a className="site-nav__link" href="/services" data-label="OUR WORK">
-            Services
-          </a>
-          <a className="site-nav__link" href="/gallery" data-label="OUR WORK">
-            Gallery
-          </a>
-          <a className="site-nav__link" href="/contact" data-label="CONTACT">
-            Contact
-          </a>
+          <Link className="site-nav__link" href="/services" data-label="OUR WORK">
+            SERVICES
+          </Link>
+          <Link className="site-nav__link" href="/gallery" data-label="OUR WORK">
+            GALLERY
+          </Link>
+          <Link className="site-nav__link" href="/contact" data-label="CONTACT">
+            CONTACT
+          </Link>
         </nav>
         {children}
         <footer className="site-footer">
