@@ -1,6 +1,6 @@
 :root {
   color-scheme: light;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Open Sans', Helvetica, sans-serif;
   background-color: #ffffff;
   color: rgb(255, 255, 255);
   letter-spacing: -0.025em; /* Adjust the value as needed */
@@ -39,14 +39,15 @@ p {
 
 .site-nav {
   background: white;
-  border: black 1px solid;
-  display: flex;
+  border-radius: 24px;
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
-  gap: 72px;
-  padding: 12px 0;
-  margin-left: 36px;
-  margin-right: 36px;
-  margin-top: 36px;
+  gap: 64px;
+  padding: 12px 36px;
+  margin: 36px auto 0;
+  width: fit-content;
+  max-width: calc(100% - 72px);
 }
 
 .site-nav__link {
@@ -202,9 +203,7 @@ p {
   }
 
   .site-nav {
-    flex-wrap: wrap;
     gap: 24px;
-    padding: 10px 0;
   }
 
   .footer-content {
