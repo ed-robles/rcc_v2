@@ -10,9 +10,11 @@ export default function HomePage() {
           video production, and web services.{" "}
         </p>
         <p>
-          We help brands and individuals make a lasting impact in the digital
-          space — combining compelling visuals with modern online experiences
-          that stand out and drive results.
+          Our work is built on collaboration, creativity, and technical
+          precision. Whether it’s developing a brand identity from the ground
+          up, or building a modern, responsive website with payment
+          functionality, we approach every project with the goal of helping our
+          clients communicate their vision clearly and creatively.
         </p>
       </div>
     </main>
