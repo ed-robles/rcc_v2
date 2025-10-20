@@ -6,7 +6,7 @@ export default function HomePage() {
           <span className="tracking-tight">
             Robles Creative Company
           </span>{" "}
-          is a creative agency based in Milwaukee - specializing in photography,
+          is a creative agency based in Milwaukee, WI - specializing in photography,
           video production, and web services.{" "}
         </p>
         <p>
