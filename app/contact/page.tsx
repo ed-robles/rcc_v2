@@ -12,7 +12,7 @@ export default function ContactPage() {
       <div className="content-page__inner">
         <header className="content-page__header">
           <p className="eyebrow">Contact</p>
-          <h1>Let's build something that moves your audience.</h1>
+          <h1>Let&apos;s build something that moves your audience.</h1>
           <p>
             Share your timeline, goals, and the story you want to tell. We will
             follow up within two business days with next steps and availability.
