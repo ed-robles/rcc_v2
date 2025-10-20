@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Robles Creative Company",
@@ -47,14 +47,17 @@ export default function RootLayout({
           />
         </header>
         <nav className="site-nav" aria-label="Primary navigation">
-          <a className="site-nav__link" href="/">
-            HOME
+          <Link className="site-nav__link" href="/" data-label="HOME">
+            Home
+          </Link>
+          <a className="site-nav__link" href="/services" data-label="OUR WORK">
+            Services
           </a>
-          <a className="site-nav__link" href="/our-work">
-            OUR WORK
+          <a className="site-nav__link" href="/gallery" data-label="OUR WORK">
+            Gallery
           </a>
-          <a className="site-nav__link" href="/contact">
-            CONTACT
+          <a className="site-nav__link" href="/contact" data-label="CONTACT">
+            Contact
           </a>
         </nav>
         {children}
@@ -139,23 +142,7 @@ export default function RootLayout({
               © {currentYear} Robles Creative Company. All rights reserved.
             </span>
             <nav aria-label="Footer secondary navigation">
-              <a
-                href="mailto:edgar@roblescreativeco.com?subject=Project%20Inquiry"
-                className="footer-link"
-              >
-                Email
-              </a>
-              <span className="footer-sep" aria-hidden>
-                •
-              </span>
-              <a
-                href="https://instagram.com/roblescreativecompany"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="footer-link"
-              >
-                Instagram
-              </a>
+            Rooted in Milwaukee. Creating for everywhere.
             </nav>
           </div>
         </footer>
