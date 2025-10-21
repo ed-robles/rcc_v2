@@ -6,8 +6,15 @@
   letter-spacing: -0.025em; /* Adjust the value as needed */
 }
 
+
 * {
   box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
 .body-bg {
@@ -85,20 +92,15 @@ p {
   flex: 1;
   display: flex;
   justify-content: center;
-  padding-left: 6px;
-  padding-right: 6px;
+  padding: 80px 24px;
 }
 
 .simple-page__inner {
   text-transform: uppercase;
   display: flex;
   flex-direction: column;
-  font-size: 3.25rem;
+  font-size: 3.5rem;
   line-height: 0.9;
-  padding-left: 60px;
-  padding-right: 60px;
-  padding-top: 32px;
-  padding-bottom: 32px;
 }
 
 .content-page {
@@ -354,14 +356,19 @@ p {
   align-items: center;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 800px) {
   .simple-page {
+    padding: 20px 16px;
   }
 
   .simple-page__inner {
-    padding-left: 12px;
-    font-size: 2rem;
+    padding-left: 10px;
+    font-size: 1.9rem;
+    padding-left: 0px;
     padding-right: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    min-height: auto;
   }
 
   .site-nav {
