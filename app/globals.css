@@ -223,7 +223,7 @@ p {
 .gallery-feature {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 8px;
   align-items: flex-start;
 }
 

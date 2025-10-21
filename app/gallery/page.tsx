@@ -28,9 +28,8 @@ export default function GalleryPage() {
         <section className="gallery-feature">
           <h2 className="gallery-feature__title">{midwestArchive.title}</h2>
           <p style={{ margin: 0, padding: 0, color: "#555555" }}>
-            Midwest Archive is an online thrift store built with Next.js 15,
-            TypeScript, Tailwind CSS for styling, NextAuth.js for
-            authentication, and Stripe for payment processing.
+            Midwest Archive is an online thrift store built with Next.js, Tailwind CSS, NextAuth.js, and Stripe. 
+            <br />
           </p>
           <a
             className="gallery-feature__image-link"
@@ -46,6 +45,7 @@ export default function GalleryPage() {
               priority
             />
           </a>
+          <p style={{color: 'black', margin: 0, fontSize: 12 }}>Click the image to visit the site.</p>
         </section>
         
         <footer className="content-page__footer">
