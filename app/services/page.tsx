@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 
 export default function ServicesPage() {
   return (
-    <main className="content-page">
+    <main className="content-page content-page--services">
       <div className="content-page__inner">
         <header className="content-page__header">
           <p className="eyebrow">Services</p>

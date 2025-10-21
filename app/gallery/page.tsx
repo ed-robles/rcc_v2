@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function GalleryPage() {
   return (
-    <main className="content-page">
+    <main className="content-page content-page--gallery">
       <div className="content-page__inner">
         <header className="content-page__header">
           <p className="eyebrow">Gallery</p>

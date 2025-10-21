@@ -112,6 +112,20 @@ p {
   color: #000000;
 }
 
+.content-page--services {
+  background-image: url("/dark-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.content-page--gallery {
+  background-image: url("/dark-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .content-page__inner {
   width: 100%;
   max-width: 960px;
