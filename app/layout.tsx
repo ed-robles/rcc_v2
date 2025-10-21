@@ -40,8 +40,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <LogoHeader />
-        <NavBar />
+        <header className="site-topbar">
+          <LogoHeader />
+          <NavBar />
+        </header>
         {children}
         <MainFooter />
       </body>

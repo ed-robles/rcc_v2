@@ -44,6 +44,16 @@ p {
   background: white;
 }
 
+.site-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
 .site-nav {
   background-color: #ffffff;
   border-top: 1px solid #000000;
@@ -113,14 +123,14 @@ p {
 }
 
 .content-page--services {
-  background-image: url("/dark-bg.jpg");
+  background-image: url("/blue-bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .content-page--gallery {
-  background-image: url("/dark-bg.jpg");
+  background-image: url("/blue-bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
