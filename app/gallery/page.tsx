@@ -47,28 +47,7 @@ export default function GalleryPage() {
             />
           </a>
         </section>
-        <section className="gallery-feature">
-          <h2 className="gallery-feature__title">{midwestArchive.title}</h2>
-          <p style={{ margin: 0, padding: 0, color: "#555555" }}>
-            Midwest Archive is an online thrift store built with Next.js 15,
-            TypeScript, Tailwind CSS for styling, NextAuth.js for
-            authentication, and Stripe for payment processing.
-          </p>
-          <a
-            className="gallery-feature__image-link"
-            href={midwestArchive.href}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src={midwestArchive.image}
-              alt={`${midwestArchive.title} gallery showcase`}
-              className="gallery-feature__image"
-              sizes="(min-width: 960px) 832px, (min-width: 640px) 90vw, 100vw"
-              priority
-            />
-          </a>
-        </section>
+        
         <footer className="content-page__footer">
           <p></p>
         </footer>
