@@ -50,10 +50,18 @@ export default function RootLayout({
           <Link className="site-nav__link" href="/" data-label="HOME">
             HOME
           </Link>
-          <Link className="site-nav__link" href="/services" data-label="OUR WORK">
+          <Link
+            className="site-nav__link"
+            href="/services"
+            data-label="OUR WORK"
+          >
             SERVICES
           </Link>
-          <Link className="site-nav__link" href="/gallery" data-label="OUR WORK">
+          <Link
+            className="site-nav__link"
+            href="/gallery"
+            data-label="OUR WORK"
+          >
             GALLERY
           </Link>
           <Link className="site-nav__link" href="/contact" data-label="CONTACT">
@@ -142,7 +150,7 @@ export default function RootLayout({
               © {currentYear} Robles Creative Company. All rights reserved.
             </span>
             <nav aria-label="Footer secondary navigation">
-            Rooted in Milwaukee. Creating for everywhere.
+              Rooted in Milwaukee, Wisconsin.
             </nav>
           </div>
         </footer>
