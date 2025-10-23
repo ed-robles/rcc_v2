@@ -6,7 +6,6 @@
   letter-spacing: -0.025em; /* Adjust the value as needed */
 }
 
-
 * {
   box-sizing: border-box;
 }
@@ -30,9 +29,6 @@ body {
   background-repeat: no-repeat;
 }
 
-p {
-  margin: 24px 0;
-}
 
 .site-header {
   top: 0;
