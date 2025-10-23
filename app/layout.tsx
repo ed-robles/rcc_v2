@@ -1,8 +1,15 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import { Inter } from "next/font/google";
 import LogoHeader from "@/components/LogoHeader";
 import NavBar from "@/components/NavBar";
 import MainFooter from "@/components/MainFooter";
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Robles Creative Company",
@@ -39,7 +46,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body>
+      <body className={inter.className}>
         <header className="site-topbar">
           <LogoHeader />
           <NavBar />
