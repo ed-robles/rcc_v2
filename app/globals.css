@@ -231,9 +231,10 @@ b,
 
 .gallery-client__description {
   margin: 0;
+  padding: 0;
   font-size: 0.95rem;
   line-height: 1.6;
-  color: #2b2b2b;
+  color: #555555;
 }
 
 .gallery-grid__image {
