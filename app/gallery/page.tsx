@@ -76,6 +76,9 @@ export default function GalleryPage() {
 
         <section className="gallery-client">
           <h2 className="gallery-feature__title">{lasGardenias.title}</h2>
+          <p className="gallery-client__description">
+            Highlights from a recent food and beverage shoot for the Milwaukee restaurant.
+          </p>
           <div className="gallery-grid">
             {lasGardenias.images.map((image) => (
               <Image
