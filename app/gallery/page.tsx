@@ -8,6 +8,32 @@ const midwestArchive = {
   image: maScImage,
 };
 
+const lasGardenias = {
+  title: "Las Gardenias, Milwaukee",
+  images: [
+    {
+      src: "/ceviche-1.webp",
+      alt: "Ceviche tostadas plated at Las Gardenias in Milwaukee",
+    },
+    {
+      src: "/drink-1.webp",
+      alt: "Craft cocktail with lime wedge at the Las Gardenias bar",
+    },
+    {
+      src: "/drink-2.webp",
+      alt: "Bartender pouring a cocktail at Las Gardenias in Milwaukee",
+    },
+    {
+      src: "/tacos-1.webp",
+      alt: "Taco plate garnished with fresh radishes at Las Gardenias",
+    },
+    {
+      src: "/tacos-2.webp",
+      alt: "Tray of tacos ready to be served at Las Gardenias",
+    },
+  ],
+};
+
 export const metadata: Metadata = {
   title: "Gallery | Robles Creative Company",
   description:
@@ -28,7 +54,7 @@ export default function GalleryPage() {
         <section className="gallery-feature">
           <h2 className="gallery-feature__title">{midwestArchive.title}</h2>
           <p style={{ margin: 0, padding: 0, color: "#555555" }}>
-            Midwest Archive is an online thrift store built with Next.js, Tailwind CSS, NextAuth.js, and Stripe. 
+            Midwest Archive is an online thrift store built with Next.js, Tailwind CSS, NextAuth.js, and Stripe.
             <br />
           </p>
           <a
@@ -47,7 +73,27 @@ export default function GalleryPage() {
           </a>
           <p style={{color: 'black', margin: 0, fontSize: 12 }}>Click the image to visit the site.</p>
         </section>
-        
+
+        <section className="gallery-client">
+          <h2 className="gallery-feature__title">{lasGardenias.title}</h2>
+          <p className="gallery-client__description">
+            Highlights from a recent food and beverage shoot for the Milwaukee restaurant.
+          </p>
+          <div className="gallery-grid">
+            {lasGardenias.images.map((image) => (
+              <Image
+                key={image.src}
+                src={image.src}
+                alt={image.alt}
+                width={1200}
+                height={800}
+                className="gallery-grid__image"
+                sizes="(min-width: 960px) 280px, (min-width: 640px) 45vw, 90vw"
+              />
+            ))}
+          </div>
+        </section>
+
         <footer className="content-page__footer">
           <p></p>
         </footer>

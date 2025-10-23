@@ -192,7 +192,6 @@ b,
 }
 
 .service-card,
-.gallery-card,
 .contact-card {
   background: rgba(255, 255, 255, 0.85);
   border: 1px solid rgba(0, 0, 0, 0.08);
@@ -204,14 +203,12 @@ b,
 }
 
 .service-card:hover,
-.gallery-card:hover,
 .contact-card:hover {
   border-color: rgba(0, 0, 0, 0.32);
   transform: translateY(-2px);
 }
 
 .service-card h2,
-.gallery-card h2,
 .contact-card h2 {
   margin: 0;
   font-size: 1.15rem;
@@ -219,12 +216,32 @@ b,
 }
 
 .service-card p,
-.gallery-card p,
 .contact-card p {
   margin: 0;
   font-size: 0.95rem;
   line-height: 1.6;
   color: #2b2b2b;
+}
+
+.gallery-client {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.gallery-client__description {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #2b2b2b;
+}
+
+.gallery-grid__image {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+  display: block;
 }
 
 .gallery-feature {
