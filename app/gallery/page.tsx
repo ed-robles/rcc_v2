@@ -9,19 +9,11 @@ const midwestArchive = {
 };
 
 const lasGardenias = {
-  title: "Las Gardenias, Milwaukee",
+  title: "Las Gardenias",
   images: [
     {
       src: "/ceviche-1.webp",
       alt: "Ceviche tostadas plated at Las Gardenias in Milwaukee",
-    },
-    {
-      src: "/drink-1.webp",
-      alt: "Craft cocktail with lime wedge at the Las Gardenias bar",
-    },
-    {
-      src: "/drink-2.webp",
-      alt: "Bartender pouring a cocktail at Las Gardenias in Milwaukee",
     },
     {
       src: "/tacos-1.webp",
@@ -30,6 +22,14 @@ const lasGardenias = {
     {
       src: "/tacos-2.webp",
       alt: "Tray of tacos ready to be served at Las Gardenias",
+    },
+    {
+      src: "/drink-1.webp",
+      alt: "Craft cocktail with lime wedge at the Las Gardenias bar",
+    },
+    {
+      src: "/drink-2.webp",
+      alt: "Bartender pouring a cocktail at Las Gardenias in Milwaukee",
     },
   ],
 };
@@ -48,7 +48,7 @@ export default function GalleryPage() {
           <p className="eyebrow">Gallery</p>
           <h1>Selected moments from recent collaborations.</h1>
           <p>
-            A collection of highlights from projects by us.
+            A collection of highlights from recent projects and collaborations.
           </p>
         </header>
         <section className="gallery-feature">
@@ -77,7 +77,7 @@ export default function GalleryPage() {
         <section className="gallery-client">
           <h2 className="gallery-feature__title">{lasGardenias.title}</h2>
           <p className="gallery-client__description">
-            Highlights from a recent food and beverage shoot for the Milwaukee restaurant.
+            Captured vibrant images of food and drink in collaboration with the new regional Mexican restaurant.
           </p>
           <div className="gallery-grid">
             {lasGardenias.images.map((image) => (
