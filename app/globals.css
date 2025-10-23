@@ -136,7 +136,7 @@ b,
   background-repeat: no-repeat;
 }
 
-.content-page--gallery {
+.content-page-- {
   background-image: url("/blue-bg.jpg");
   background-size: cover;
   background-position: center;
@@ -184,7 +184,7 @@ b,
 }
 
 .service-grid,
-.gallery-grid,
+.-grid,
 .contact-options {
   display: grid;
   gap: 24px;
@@ -223,10 +223,10 @@ b,
   color: #2b2b2b;
 }
 
-.gallery-client {
+.-client {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px;
 }
 
 .gallery-client__description {
