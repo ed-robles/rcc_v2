@@ -24,10 +24,6 @@ const lasGardenias = {
       alt: "Tray of tacos ready to be served at Las Gardenias",
     },
     {
-      src: "/drink-1.webp",
-      alt: "Craft cocktail with lime wedge at the Las Gardenias bar",
-    },
-    {
       src: "/drink-2.webp",
       alt: "Bartender pouring a cocktail at Las Gardenias in Milwaukee",
     },
